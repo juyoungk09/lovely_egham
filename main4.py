@@ -49,23 +49,18 @@ while True:
 
                 print(f"💖 {author}의 메시지에 하트 달기")
                 ActionChains(driver).move_to_element(msg).perform()
-                
-                driver.execute_script("arguments[0].click();", msg)
+
                 # hoverBarButton 찾기
                 buttons = msg.find_elements(By.XPATH, ".//*[contains(@class, 'hoverBarButton')]")
                 found = False
-                checked = False
                 for btn in buttons:
-                    checked = True
                     label = btn.get_attribute("aria-label")
                     if label and ("반응 추가하기" in label or "Add Reaction" in label):
                         driver.execute_script("arguments[0].click();", btn)
                         found = True
                         break
-                if not checked :
-                    print("응 없어")
-                    continue
-                elif not found:
+
+                if not found:
                     print("❌ '반응 추가하기' 버튼 못 찾음")
                     continue
 
