@@ -1,2 +1,2 @@
 # lovely_egl
-AnA 16기 대 은 교 선배님을 향한 1학년 5반 애, 아, 저의 하트를 받아주세요 -> to master branch
+AnA 16기 대 은 교 선배님을 향한 하트를 받아주세요 -> to master branch
